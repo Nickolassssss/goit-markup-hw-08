@@ -1,12 +1,26 @@
 .about-list__item {
-  flex-basis: calc(100% / 4 - 30px);
+  width: 100%;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .about-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-left: -30px;
+  margin-bottom: -60px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .about-list__title {
@@ -15,6 +29,8 @@
   font-size: 14px;
   line-height: 1.15;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
   color: var(--secondary-tytle-color);
 }
 
