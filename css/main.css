@@ -27,7 +27,7 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -61,10 +61,28 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .hero-btn {
@@ -465,8 +483,6 @@ body {
 }
 
 .hero-container {
-  display: flex;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -498,14 +514,34 @@ body {
 }
 
 .about-list__item {
-  flex-basis: calc(100% / 4 - 30px);
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-list__item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
 }
 
 .about-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-bottom: -60px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .about-list__title {
@@ -514,6 +550,8 @@ body {
   font-size: 14px;
   line-height: 1.15;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
   color: var(--secondary-tytle-color);
 }
 
